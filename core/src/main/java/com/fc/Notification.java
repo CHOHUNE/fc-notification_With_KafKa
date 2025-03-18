@@ -19,11 +19,4 @@ public class Notification {
     public Instant createdAt;
     public Instant deletedAt;
 
-
-    public Notification(String id, Long userId, NotificationType type, Instant createdAt) {
-        this.id = id;
-        this.userId = userId;
-        this.type = type;
-        this.createdAt = createdAt;
-    }
 }
