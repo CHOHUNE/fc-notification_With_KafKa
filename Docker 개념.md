@@ -22,7 +22,10 @@
 > 도커를설치한 호스트(로컬 PC)의 55000번 포트를, 컨테이너의 27017번 포트(MongoDB의 고정된 포트)에 연결한다는 뜻
 > 55000번 포트는 Testcontainers가 MongoDB Docker 컨테이너를 실행하면서 random 지정한 포트다.
 
-
-
-
+### Docker Compose
+- 여러 Docker 컨테이너를 정의하고 실행하기 위한 도구
+- YAML 파일을  사용해 컨테이너 설정을 동의한다
+- 주요 명령어
+  - docker compose up : 모든 컨테이너 실행
+  - docker compose down : 실행 중인 컨테이너를 중지하고 삭제 
 
