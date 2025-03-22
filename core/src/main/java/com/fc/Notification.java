@@ -1,22 +1,23 @@
 package com.fc;
 
 
+import com.fc.config.NotificationType;
 import java.time.Instant;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-enum NotificationType{
-LIKE,
-COMMENT,
-FOLLOW
-}
-
+@Getter
 @AllArgsConstructor
-public class Notification {
+@Document("notifications") // mongoDB 어떤 collection 에 넣을 것인지 결정
+public abstract class Notification {
 
-    public String id;
-    public Long userId;
-    public NotificationType type;
-    public Instant createdAt;
-    public Instant deletedAt;
+    private String id;
+    private Long userId;
+    private NotificationType type;
+    private Instant createdAt;
+    private Instant occurredAt; // 알림 event 가 실제 발생된 시간
+    private Instant lastUpdatedAt;
+    private Instant deletedAt;
 
 }
