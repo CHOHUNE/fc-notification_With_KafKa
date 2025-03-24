@@ -1,7 +1,6 @@
 package com.fc;
 
 
-import com.fc.config.NotificationType;
 import java.time.Instant;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
