@@ -35,6 +35,14 @@ public class LikeNotification extends Notification{
 
     // domain 주도 설계 방식으로 -> DDD
 
+    public void removerLiker(Long userId, Instant now ) {
+
+        this.likerIds.remove(userId);
+        this.setLastUpdatedAt(now);
+        // 삭제 예정 업데이트, 좋아요를 취소했다고 언제 Occured 됐는지 필요 없음 -> update 시 최상단으로 오기 때문
+
+    }
+
 
 
 }
