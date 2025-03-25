@@ -52,7 +52,7 @@ public class LikeAddTask {
 
     private Notification createOrUpdateNotification(LikeEvent event, Post post) {
 
-        Optional<Notification> optionalNotification = notificationGetService.getNotificationByTypeCommentId(
+        Optional<Notification> optionalNotification = notificationGetService.getNotificationByTypePostId(
             NotificationType.LIKE, post.getId());
 
         Instant now = Instant.now();
@@ -60,10 +60,12 @@ public class LikeAddTask {
 
         if (optionalNotification.isPresent()) {
             // 업데이트
+            log.info("업데이트");
          return updateNotification((LikeNotification) optionalNotification.get(), event, now, retention);
 
         } else {
             //신규 생성
+            log.info("신규생성");
             return createNotification(post, event,now,retention);
         }
 

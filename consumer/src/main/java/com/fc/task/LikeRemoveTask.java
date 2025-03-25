@@ -53,7 +53,7 @@ public class LikeRemoveTask {
         // 여기서 저장할지 or 삭제할지 결정
 
         // 삭제를 했는데 -> likers가 빈 경우 -> 삭제
-        if (likeNotification.getLikerIds().isEmpty()) {
+        if (likeNotification.getUserList().isEmpty()) {
             notificationRemoveService.deleteById(likeNotification.getId());
         }else{
             // 삭제를 했는데 -> likers가 비지 않은 경우 -> 업데이트

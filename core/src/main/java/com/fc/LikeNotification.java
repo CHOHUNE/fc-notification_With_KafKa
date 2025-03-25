@@ -4,7 +4,6 @@ package com.fc;
 import java.time.Instant;
 import java.util.List;
 import lombok.Getter;
-import lombok.Setter;
 import org.springframework.data.annotation.TypeAlias;
 
 
@@ -15,7 +14,7 @@ import org.springframework.data.annotation.TypeAlias;
 public class LikeNotification extends Notification{
 
     private final Long postId;
-    private final List<Long> likerIds;
+    private final List<Long> userList;
 
 
     public LikeNotification(String id, Long userId, NotificationType type, Instant createdAt,
@@ -23,11 +22,11 @@ public class LikeNotification extends Notification{
         List<Long> userList) {
         super(id, userId, type, createdAt, occurredAt, lastUpdatedAt, deletedAt);
         this.postId = postId;
-        this.likerIds = userList;
+        this.userList = userList;
     }
 
     public void addLiker(Long userId, Instant occurredAt, Instant now, Instant retention) {
-        this.likerIds.add(userId);
+        this.userList.add(userId);
         this.setOccurredAt(occurredAt);
         this.setLastUpdatedAt(now);
         this.setDeletedAt(retention);
@@ -37,7 +36,7 @@ public class LikeNotification extends Notification{
 
     public void removerLiker(Long userId, Instant now ) {
 
-        this.likerIds.remove(userId);
+        this.userList.remove(userId);
         this.setLastUpdatedAt(now);
         // 삭제 예정 업데이트, 좋아요를 취소했다고 언제 Occured 됐는지 필요 없음 -> update 시 최상단으로 오기 때문
 
