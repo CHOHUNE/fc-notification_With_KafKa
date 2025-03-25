@@ -4,11 +4,13 @@ package com.fc;
 import java.time.Instant;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.Setter;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 import org.springframework.data.mongodb.core.mapping.FieldType;
 
 @Getter
+@Setter
 @AllArgsConstructor
 @Document("notifications") // mongoDB 어떤 collection 에 넣을 것인지 결정
 public abstract class Notification {

@@ -4,7 +4,10 @@ package com.fc;
 import java.time.Instant;
 import java.util.List;
 import lombok.Getter;
+import lombok.Setter;
 import org.springframework.data.annotation.TypeAlias;
+
+
 
 @TypeAlias("LikeNotification")
 @Getter
@@ -22,4 +25,16 @@ public class LikeNotification extends Notification{
         this.postId = postId;
         this.likerIds = userList;
     }
+
+    public void addLiker(Long userId, Instant occurredAt, Instant now, Instant retention) {
+        this.likerIds.add(userId);
+        this.setOccurredAt(occurredAt);
+        this.setLastUpdatedAt(now);
+        this.setDeletedAt(retention);
+    }
+
+    // domain 주도 설계 방식으로 -> DDD
+
+
+
 }
