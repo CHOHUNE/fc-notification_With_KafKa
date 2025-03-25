@@ -1,6 +1,5 @@
 package com.fc.task;
 
-import com.fc.Notification;
 import com.fc.NotificationGetService;
 import com.fc.NotificationRemoveService;
 import com.fc.NotificationType;
@@ -33,7 +32,7 @@ public class CommendRemoveTask {
         if ((Objects.equals(post.getUserId(), event.getUserId()))) {
             return;
         }
-        getService.getNotification(NotificationType.COMMENT, event.getCommentId())
+        getService.getNotificationByTypeCommentId(NotificationType.COMMENT, event.getCommentId())
             .ifPresentOrElse(
                 notification -> removeService.deleteById(notification.getId()),
                 ()-> log.error("Notification not found"));
