@@ -33,8 +33,7 @@ public class CommendRemoveTask {
             return;
         }
         getService.getNotificationByTypeCommentId(NotificationType.COMMENT, event.getCommentId())
-            .ifPresentOrElse(
-                notification -> removeService.deleteById(notification.getId()),
-                ()-> log.error("Notification not found"));
+            .ifPresent(
+                notification -> removeService.deleteById(notification.getId()));
     }
 }
