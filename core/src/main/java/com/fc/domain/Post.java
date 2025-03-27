@@ -1,4 +1,4 @@
-package com.fc;
+package com.fc.domain;
 
 /*
 * 추후 이관 예정
@@ -7,7 +7,6 @@ package com.fc;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
 
 @AllArgsConstructor
 @Data

@@ -1,11 +1,11 @@
 package com.fc.task;
 
-import com.fc.LikeNotification;
-import com.fc.Notification;
-import com.fc.NotificationGetService;
-import com.fc.NotificationRemoveService;
-import com.fc.NotificationSaveService;
-import com.fc.NotificationType;
+import com.fc.domain.LikeNotification;
+import com.fc.domain.Notification;
+import com.fc.service.NotificationGetService;
+import com.fc.service.NotificationRemoveService;
+import com.fc.service.NotificationSaveService;
+import com.fc.domain.NotificationType;
 import com.fc.event.LikeEvent;
 import java.time.Instant;
 import java.util.Optional;

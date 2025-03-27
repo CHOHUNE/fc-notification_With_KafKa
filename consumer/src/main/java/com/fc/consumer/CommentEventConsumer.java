@@ -1,5 +1,7 @@
-package com.fc.event;
+package com.fc.consumer;
 
+import com.fc.event.CommentEvent;
+import com.fc.event.CommentEventType;
 import com.fc.task.CommendRemoveTask;
 import com.fc.task.CommentAddTask;
 import java.util.function.Consumer;

@@ -1,5 +1,7 @@
-package com.fc;
+package com.fc.repository;
 
+import com.fc.domain.Notification;
+import com.fc.domain.NotificationType;
 import java.util.Optional;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;

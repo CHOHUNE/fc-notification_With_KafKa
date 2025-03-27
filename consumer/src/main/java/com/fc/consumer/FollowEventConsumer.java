@@ -1,6 +1,8 @@
-package com.fc.event;
+package com.fc.consumer;
 
 
+import com.fc.event.FollowEvent;
+import com.fc.event.FollowEventType;
 import com.fc.task.FollowAddTask;
 import com.fc.task.FollowRemoveTask;
 import java.util.function.Consumer;

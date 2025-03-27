@@ -1,15 +1,15 @@
 package com.fc.task;
 
 
-import com.fc.Comment;
-import com.fc.CommentClient;
-import com.fc.CommentNotification;
-import com.fc.Notification;
-import com.fc.NotificationIdGenerator;
-import com.fc.NotificationSaveService;
-import com.fc.NotificationType;
-import com.fc.Post;
-import com.fc.PostClient;
+import com.fc.domain.Comment;
+import com.fc.domain.CommentClient;
+import com.fc.domain.CommentNotification;
+import com.fc.domain.Notification;
+import com.fc.utils.NotificationIdGenerator;
+import com.fc.service.NotificationSaveService;
+import com.fc.domain.NotificationType;
+import com.fc.domain.Post;
+import com.fc.client.PostClient;
 import com.fc.event.CommentEvent;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;

@@ -1,4 +1,4 @@
-package com.fc.api;
+package com.fc.controller.test;
 
 
 import com.fc.event.CommentEvent;

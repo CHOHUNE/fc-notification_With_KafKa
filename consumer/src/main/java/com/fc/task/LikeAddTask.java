@@ -1,18 +1,16 @@
 package com.fc.task;
 
-import com.fc.LikeNotification;
-import com.fc.Notification;
-import com.fc.NotificationGetService;
-import com.fc.NotificationIdGenerator;
-import com.fc.NotificationSaveService;
-import com.fc.NotificationType;
-import com.fc.Post;
-import com.fc.PostClient;
+import com.fc.domain.LikeNotification;
+import com.fc.domain.Notification;
+import com.fc.service.NotificationGetService;
+import com.fc.utils.NotificationIdGenerator;
+import com.fc.service.NotificationSaveService;
+import com.fc.domain.NotificationType;
+import com.fc.domain.Post;
+import com.fc.client.PostClient;
 import com.fc.event.LikeEvent;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
 import lombok.extern.slf4j.Slf4j;

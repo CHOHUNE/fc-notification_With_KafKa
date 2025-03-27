@@ -1,7 +1,8 @@
-package com.fc.event;
+package com.fc.consumer;
 
 import static com.fc.event.LikeEventType.*;
 
+import com.fc.event.LikeEvent;
 import com.fc.task.LikeAddTask;
 import com.fc.task.LikeRemoveTask;
 import java.util.function.Consumer;

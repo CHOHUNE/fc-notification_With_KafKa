@@ -1,4 +1,4 @@
-package com.fc;
+package com.fc.domain;
 
 import java.time.Instant;
 import java.util.HashMap;
