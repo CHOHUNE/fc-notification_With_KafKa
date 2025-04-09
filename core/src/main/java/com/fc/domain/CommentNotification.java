@@ -16,7 +16,9 @@ public class CommentNotification extends Notification {
     public CommentNotification(String id, Long userId, NotificationType type,
         Instant createdAt, Instant occurredAt, Instant lastUpdatedAt,
         Instant deletedAt, Long postId, Long writerId, String comment, Long commentId) {
+
         super(id, userId, type, createdAt, occurredAt, lastUpdatedAt, deletedAt);
+
         this.postId = postId;
         this.writerId = writerId;
         this.comment = comment;

@@ -5,6 +5,7 @@ import java.time.Instant;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 import org.springframework.data.mongodb.core.mapping.FieldType;
@@ -15,6 +16,7 @@ import org.springframework.data.mongodb.core.mapping.FieldType;
 @Document("notifications") // mongoDB 어떤 collection 에 넣을 것인지 결정
 public abstract class Notification {
 
+    @Id
     @Field(targetType = FieldType.STRING)
     private String id;
     // mongoDB 는 기본적으로 ID 필드를 objectID 타입으로 지정한다.
@@ -25,6 +27,7 @@ public abstract class Notification {
     private Long userId;
     private NotificationType type;
     private Instant createdAt;
+    @Field(targetType = FieldType.DATE_TIME)
     private Instant occurredAt; // 알림 event 가 실제 발생된 시간
     private Instant lastUpdatedAt;
     private Instant deletedAt;
